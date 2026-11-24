@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Patrick Eduard John Damicog — Customer Support, Technical Support, Team Leadership and Virtual Assistance.">
+<title>Patrick Damicog | Professional Portfolio</title>
+<style>
+:root{--navy:#071b36;--blue:#1684ff;--cyan:#32c4ff;--ink:#142b49;--muted:#61738b;--light:#f4f8fc;--white:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--ink);background:var(--light);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.container{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:10;background:rgba(5,22,45,.96);color:white;border-bottom:1px solid rgba(255,255,255,.1);backdrop-filter:blur(12px)}
+nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-weight:800;font-size:1.15rem;display:flex;align-items:center;gap:10px}
+.logo{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--blue),var(--cyan));display:grid;place-items:center;font-weight:900;font-size:1.2rem}
+.navlinks{display:flex;gap:22px;font-size:.92rem}
+.navlinks a:hover{color:var(--cyan)}
+.menu{display:none;border:0;background:none;color:white;font-size:1.5rem}
+.hero{background:radial-gradient(ellipse at 75% 30%,#143d6d 0%,transparent 40%),linear-gradient(130deg,#06152b,#09274b 65%,#0a3d77);color:white;padding:90px 0 85px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:55px}
+.eyebrow{color:var(--cyan);font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:.82rem}
+.hero h1{font-size:clamp(2.5rem,6vw,4.5rem);line-height:1.08;margin:15px 0}
+.hero h1 span{color:var(--cyan)}
+.hero p{font-size:1.12rem;color:#d8e7f7;max-width:640px}
+.tags{display:flex;flex-wrap:wrap;gap:10px;margin:25px 0}
+.tag{border:1px solid #4175a6;color:#e3f1ff;padding:7px 12px;border-radius:50px;font-size:.85rem}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-block;border-radius:50px;padding:12px 22px;font-weight:700;transition:.2s}
+.btn.primary{background:var(--blue);color:white}.btn.primary:hover{background:#3999ff;transform:translateY(-2px)}
+.btn.secondary{border:1px solid #9cb8d4;color:white}.btn.secondary:hover{background:#ffffff15}
+.hero-card{background:linear-gradient(160deg,#163d68,#0b2545);border:1px solid #37638d;border-radius:28px;padding:28px;box-shadow:0 25px 70px #0004}
+.hero-card .monogram{width: 100px;px;height: 100px;px;border-radius:28px;display:grid;place-items:center;font-size:2.6rem;font-weight:900;color:white;background:linear-gradient(135deg,#1684ff,#32c4ff);margin-bottom:20px}
+.hero-card h2{font-size:1.35rem}.hero-card p{font-size:.95rem;margin-top:10px}
+.quick{display:grid;gap:15px;margin-top:20px}.quick div{display:flex;gap:13px;align-items:center;color:#e2f0ff}.quick b{color:var(--cyan)}
+section{padding:76px 0}
+.section-title{font-size:2.1rem;margin-bottom:10px;color:var(--navy)}
+.section-lead{color:var(--muted);max-width:680px;margin-bottom:34px}
+.about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:30px}
+.panel{background:white;border:1px solid #e4edf5;border-radius:22px;padding:28px;box-shadow:0 10px 35px #102d4b08}
+.panel p+p{margin-top:15px}
+.values{display:grid;grid-template-columns:repeat(2,1fr);gap:13px}
+.value{background:#edf5ff;border-radius:16px;padding:18px;font-weight:700}
+.value small{display:block;color:var(--muted);font-weight:500;margin-top:5px}
+.skills{background:#081e3a;color:white}
+.skills .section-title{color:white}.skills .section-lead{color:#c1d3e7}
+.skill-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.skill{padding:20px;background:#112f51;border:1px solid #25486c;border-radius:18px}
+.skill h3{font-size:1rem;margin-bottom:8px;color:#eaf6ff}.skill p{font-size:.88rem;color:#bed1e6}
+.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.project{background:white;border:1px solid #e4edf5;border-radius:20px;padding:25px;transition:.2s}
+.project:hover{transform:translateY(-4px);box-shadow:0 18px 40px #102d4b10}
+.project .number{color:var(--blue);font-weight:900;font-size:.9rem}.project h3{margin:10px 0}.project p{color:var(--muted);font-size:.94rem}
+.project ul{padding-left:20px;margin-top:12px;color:var(--muted);font-size:.9rem}
+.experience{background:#edf4fb}
+.timeline{display:grid;gap:18px}
+.role{display:grid;grid-template-columns:150px 1fr;gap:25px;padding:25px;background:white;border-radius:20px;border:1px solid #e1eaf3}
+.role .role-label{color:var(--blue);font-weight:800}.role h3{margin-bottom:8px}.role ul{padding-left:20px;color:var(--muted)}
+.tools{display:flex;flex-wrap:wrap;gap:10px}.tools span{padding:9px 14px;background:#eaf3ff;border-radius:30px;font-weight:600;color:#20476f}
+.contact{background:linear-gradient(130deg,#06152b,#09274b);color:white}
+.contact .section-title{color:white}.contact .section-lead{color:#c1d3e7}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.contact-card{background:#112f51;border:1px solid #25486c;border-radius:22px;padding:28px}
+.contact-card a{color:var(--cyan);overflow-wrap:anywhere}
+footer{padding:24px;text-align:center;background:#041326;color:#9bb4cd;font-size:.88rem}
+@media(max-width:850px){.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}.projects{grid-template-columns:repeat(2,1fr)}.skill-grid{grid-template-columns:repeat(2,1fr)}.navlinks{gap:12px}}
+@media(max-width:600px){nav{height:64px}.navlinks{display:none;position:absolute;top:64px;left:0;right:0;background:#06152b;padding:20px;flex-direction:column}.navlinks.open{display:flex}.menu{display:block}.hero{padding:60px 0}.projects{grid-template-columns:1fr}.skill-grid{grid-template-columns:1fr 1fr}.role{grid-template-columns:1fr;gap:8px}section{padding:55px 0}.section-title{font-size:1.8rem}}
+.profile-photo {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 24px;
+    margin-bottom: 20px;
+    border: 3px solid #32c4ff;
+}
+.project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 15px 0;
+}
+.project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 15px 0;
+}
+.project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 15px 0;
+}
+.project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 15px 0;
+}
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Hover effects for project cards */
+.project {
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+/* Button animation */
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+/* Gentle entrance animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero h1,
+.hero p,
+.hero-card {
+    animation: fadeIn 1s ease forwards;
+}
+
+</style>
+</head>
+<body>
+<header><div class="container"><nav>
+<a class="brand" href="#home"><span class="logo">PD</span> Patrick Damicog</a>
+<div class="navlinks" id="navlinks"><a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a></div>
+<button class="menu" aria-label="Toggle navigation" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+</nav></div></header>
+<main>
+<section class="hero" id="home"><div class="container hero-grid">
+<div><div class="eyebrow">Professional Portfolio</div><h1>Hi, I'm <span>Patrick Damicog.</span></h1>
+<p>Customer support professional, team leader, and problem solver who believes great experiences begin with listening, ownership, and continuous improvement.</p>
+<div class="tags"><span class="tag">Customer Experience</span><span class="tag">Technical Support</span><span class="tag">Team Leadership</span><span class="tag">Virtual Assistance</span></div>
+<div class="actions">
+<a class="btn primary" href="#projects">Explore My Work ↗</a>
+
+<a class="btn secondary" href="Patrick-Damicog-CV.pdf" download>
+Download My CV ↓
+</a>
+
+<a class="btn secondary" href="#contact">Let's Connect</a>
+</div></div>
+<aside class="hero-card"><img src="profile.jpg.png" alt="Patrick Damicog"
+     class="profile-photo"><h2>Learn. Improve. Achieve.</h2><p>Helping customers, supporting teams, and finding practical solutions—while continuously learning new tools and skills.</p>
+<div class="quick"><div>✦ <span><b>Leadership</b><br>Coaching & KPI support</span></div><div>⌁ <span><b>Customer Care</b><br>Service & troubleshooting</span></div><div>⌘ <span><b>Digital Skills</b><br>Sheets & web fundamentals</span></div></div></aside>
+</div></section>
+<section id="about"><div class="container"><h2 class="section-title">About Me</h2><p class="section-lead">A little about my professional journey and what I bring to a team.</p>
+<div class="about-grid"><div class="panel"><p>I have several years of experience in the BPO industry, including customer service, technical support, and Team Leader responsibilities. I've developed strong communication, problem-solving, coaching, and organizational skills through supporting customers and helping teams work toward their goals.</p><p>I enjoy learning systems, adapting to new processes, and making information easier to use. I'm also building practical web-development skills and creating digital projects that reflect my curiosity and initiative.</p><p>Whether assisting a customer, coordinating work, documenting an issue, or helping a teammate improve, I approach tasks with professionalism, patience, and accountability.</p></div>
+<div class="values"><div class="value">Customer-focused<small>Listen, understand, and assist</small></div><div class="value">Solution-driven<small>Find practical ways forward</small></div><div class="value">Team-oriented<small>Collaborate and support</small></div><div class="value">Always learning<small>Grow through feedback</small></div></div></div></div></section>
+<section class="skills" id="skills"><div class="container"><h2 class="section-title">Skills & Capabilities</h2><p class="section-lead">A mix of people skills, operational experience, and developing technical capabilities.</p>
+<div class="skill-grid">
+<div class="skill"><h3>Customer Service</h3><p>Customer inquiries, empathetic communication, resolution and follow-up.</p></div>
+<div class="skill"><h3>Technical Support</h3><p>Troubleshooting, explaining solutions, documenting and escalating issues.</p></div>
+<div class="skill"><h3>Team Leadership</h3><p>Coaching, performance monitoring, motivation and accountability.</p></div>
+<div class="skill"><h3>Operations</h3><p>Process adherence, coordination, reporting and workflow organization.</p></div>
+<div class="skill"><h3>Communication</h3><p>Clear writing, professional calls, listening and collaboration.</p></div>
+<div class="skill"><h3>Administrative Support</h3><p>Tracking, documentation, scheduling, task follow-up and organization.</p></div>
+<div class="skill"><h3>Web Fundamentals</h3><p>HTML, CSS, JavaScript basics and JSON-driven content.</p></div>
+<div class="skill"><h3>Problem-solving</h3><p>Investigating issues, identifying gaps and taking practical action.</p></div>
+</div></div></section>
+<section id="projects"><div class="container"><h2 class="section-title">Selected Projects & Work Samples</h2><p class="section-lead">Illustrative work samples based on workflows and skills. These are descriptions of capabilities, not claims of client deliverables.</p>
+<div class="projects">
+<div class="project"><span class="number">01 / SUPPORT</span> <img src="Customer Support Workflow.png"
+     alt="Sample KPI tracker"
+     class="project-image">
+     <h3>Customer Support Workflow</h3><p>A structured approach to handling customer concerns from first contact to resolution and documentation.</p><ul><li>Receive Request – Receive customer inquiries via phone, email, chat, or ticket.</li><li>Understand the Issue – Listen, gather information, and identify the root cause.</li><li>Confirm and document</li><li>Provide a Solution – Troubleshoot, provide guidance, or escalate if necessary. </li><li>Confirm Resolution – Ensure the customer's issue is resolved and they are satisfied. <li>1. Document & Follow Up – Record the interaction and monitor pending actions. </li></ul></div>
+<div class="project"><span class="number">02 / TRACKING</span> <img src="kpi-tracker.png.jpg"
+     alt="Sample KPI tracker"
+     class="project-image">
+     <h3>Team KPI Tracker</h3><p>A spreadsheet concept for tracking attendance, performance, progress and follow-up actions.</p><ul><li>Organized data columns</li><li>Progress visibility</li><li>Action tracking</li></ul></div>
+<div class="project"><span class="number">03 / LEADERSHIP</span> <img src="Coaching Framework.png"
+     alt="Sample KPI tracker"
+     class="project-image">
+     <h3>Coaching Framework</h3><p>A practical coaching flow focused on identifying gaps, setting actions and supporting improvement.</p><ul><li>Review performance</li><li>Agree action plan</li><li>Follow up</li></ul></div>
+<div class="project"><span class="number">04 / WEB</span> <img src="Knowledge Hub.jpg"
+     alt="Sample KPI tracker"
+     class="project-image">
+     <h3>Knowledge Hub Website</h3><p>A searchable resource hub concept for organizing support articles, links and troubleshooting information.</p><ul><li>HTML, CSS & JS</li><li>JSON content</li><li>Searchable resources</li></ul></div>
+<div class="project"><span class="number">05 / COORDINATION</span><h3>Lead & Appointment Flow</h3><p>A lead-management process designed to capture, qualify, book, track and follow up on leads.</p><ul><li>Lead qualification</li><li>Calendar booking</li><li>Follow-up tracking</li></ul></div>
+<div class="project"><span class="number">06 / LEARNING</span><h3>Personal Development</h3><p>Ongoing self-development through learning tools, building small projects and improving digital workflows.</p><ul><li>Learn new tools</li><li>Practice projects</li><li>Reflect and improve</li></ul></div>
+</div></div></section>
+<section class="experience" id="experience"><div class="container"><h2 class="section-title">Professional Experience</h2><p class="section-lead">Experience across customer service, technical support and team leadership.</p><div class="timeline">
+<div class="role"><div class="role-label">Customer Care Representative</div><div><h3>Customer Care · rain South Africa</h3><ul><li> Handled customer calls and emails involving rain products and services, troubleshooting, account concerns, and complaints.</li><li>Explained product and service information clearly, documented customer interactions, and maintained accurate records.</li><li>Handled escalations and collaborated with other departments.</li><li>Focused on customer satisfaction, effective communication, and meeting performance expectations.</li></ul></div></div>
+
+<div class="role"><div class="role-label">Team Leadership</div><div><h3>Team Leader · Foundever</h3><ul><li>Motivate and guide team members toward targets.</li><li>Track KPIs, attendance, productivity, and performance metrics.</li><li>Provide feedback, coaching, and improvement plans.</li><li>Manage schedules, workload, and daily operations.</li></ul></div></div>
+<div class="role"><div class="role-label">Senior Representative</div><div><h3>Senior Representative · IQor</h3><ul><li>The go-to resource for product, process, and system knowledge.</li><li>Agent support, escalations, knowledge management, coaching, and process improvement.</li><li>Product knowledge, communication, problem-solving, collaboration, and continuous learning.</li></ul></div></div>
+<div class="role"><div class="role-label">Technical Support</div><div><h3>Technical Support Representative</h3><ul><li>Troubleshot customer technical concerns.</li><li>Guided customers through clear step-by-step solutions.</li><li>Documented cases and escalated complex issues.</li></ul></div></div>
+</div></div></section>
+<section id="tools"><div class="container"><h2 class="section-title">Tools & Technologies</h2><p class="section-lead">Tools I've used or am developing familiarity with. Platform-specific experience can vary by role.</p><div class="tools"><span>Google Sheets</span><span>Google Docs</span><span>Microsoft Excel</span><span>Microsoft Word</span><span>Microsoft Teams</span><span>VS Code</span><span>HTML</span><span>CSS</span><span>JavaScript basics</span><span>JSON</span><span>CRM / ticketing adaptability</span></div></div></section>
+<section class="contact" id="contact"><div class="container"><h2 class="section-title">Let's Connect</h2><p class="section-lead">I'm open to opportunities in customer support, technical support, team leadership, operations and virtual assistance.</p><div class="contact-grid">
+<div class="contact-card"><h3>Get in touch</h3><p style="margin-top:14px">Email: <a href="mailto:damicogpatrick2020@gmail.com">damicogpatrick2020@gmail.com</a></p><p style="margin-top:10px">LinkedIn: <a href="https://www.linkedin.com/in/patrick-eduard-john-damicog-789062329/">https://www.linkedin.com/in/patrick-eduard-john-damicog-789062329/</a></p><p style="margin-top:10px">Location: Philippines · Remote-ready</p></div>
+<div class="contact-card"><h3>What I bring</h3><p style="margin-top:14px">Customer-first mindset, leadership experience, a willingness to learn, and a commitment to taking ownership of my work.</p><div class="actions"><a class="btn primary" href="mailto:YOUR_EMAIL_HERE">Send an Email ↗</a></div></div>
+</div></div></section>
+</main>
+<footer>© <span id="year"></span> Patrick Damicog · Learn • Improve • Achieve</footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navlinks').classList.remove('open')))</script>
+</body></html>
